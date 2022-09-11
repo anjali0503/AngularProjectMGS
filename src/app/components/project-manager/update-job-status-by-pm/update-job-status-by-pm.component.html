@@ -1,0 +1,15 @@
+<h2>Update New Address</h2>
+<br>
+<div [hidden]="submitted">
+    <form (submit)="updateJobStatus()">
+      <label>Job Status : </label>
+      <input type="text" name="jobStatus" [(ngModel)]="jobdescription.jobStatus">
+
+
+      <input type="submit" value="Update Status">
+    </form>
+  </div>
+  <div [hidden]="!submitted">
+    <h4>Job Status Updated Successfully</h4>
+    <button (click)="backtohome()">Go Back to Home</button>
+  </div>
